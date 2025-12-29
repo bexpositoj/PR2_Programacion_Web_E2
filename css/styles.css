@@ -1,0 +1,196 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0;
+    /*background-color: #e7e7e7; /* Fondo gris claro */
+    background-color: #dee2e6;
+    text-align: center;
+    background-image: url('../img/container_bg.png'); /* Patrón de fondo */
+}
+
+/* Estolo de los botones */
+button{
+    background-color: #4998F1;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    margin: 8px auto;
+}
+
+/* Estilos del menú superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(3, 37, 65); /* Color rojo de Marvel */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    margin-bottom: 20px;
+}
+
+.navbar h1{
+    color: #e9e4e4 ; /* Rojo de Marvel */
+}
+
+.navbar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+.navbar-left img {
+    height: 40px; /* Ajusta la altura según sea necesario */
+    margin-bottom: 5px;
+}
+
+.navbar-right {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right li {
+    margin: 0 15px;
+}
+
+.navbar-right li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-right li a:hover {
+    color: #ffd700; /* Color dorado al pasar el mouse */
+}
+
+/* Dropdown menu (submenú) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #838181;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #ffd700; /* Color dorado al pasar el mouse */
+}
+
+/* Spinner loader */
+#loader {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 999; /* Asegura que se superponga al contenido */
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Desenfocar el contenido mientras se carga */
+.loading #comicsContainer {
+    filter: blur(5px); /* Desenfoca el contenido */
+    pointer-events: none; /* Evita la interacción con el contenido */
+    opacity: 0.6; /* Añade un efecto de "pantalla tupida" */
+}
+
+/* Estilos para la sección de búsqueda */
+
+/* Estilos para la presentación de listas */
+
+.pokemon-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    padding: 8px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.card:hover {
+    border: 2px solid black;
+    margin: 6px;
+}
+
+.sprite {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+button[id^="W-"], button[id^="T-"] {
+    background-color: #F19849; /* Rojo */
+}
+
+
+/* Estilos para el detalle Pokémon*/
+
+.pokedex-card {
+    width: 640px;
+    padding: 8px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.pokedex-card p, .pokedex-card span {
+    text-align: left;
+    margin: 4px 20px;
+    padding: 4px 20px;
+
+}
+
+.pokedex-card div {
+    margin: 20px auto;
+    width: 320px;
+}
+
+
+
+/* Estilos para la login y registro */

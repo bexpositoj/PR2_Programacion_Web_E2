@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Indice de Pokemons</title>
+</head>
+<body>
+    <!-- Menú superior -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="../img/pokedex-uoc.png">
+            </div>
+            <ul class="navbar-right">
+                <li><a href="indice.html">Pokemons</a></li>
+                <li><a href="listas.html">Listas
+                    <i class="fa-solid fa-heart"></i> <span style="font-size: 0.6em;" id="myTeamCount"></span>
+                    <i class="fa-solid fa-eye"></i> <span style="font-size: 0.6em;" id="wishesCount"></span>
+                <li><a href="video.html">Video</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" id="menuButton">Usuario</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="logoutButton">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="loader"></div>
+
+    <div class="top-container">
+    <!--<h1>Buscador de Pokémon</h1>-->
+        <div class="search-section">
+            <div class="type-filter">
+                <h3>Filtrar por tipo</h3>
+                <ul id="typeList">
+                    <!-- La lista de tipos se rrellenara con  JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="search-controls">
+                <div class="input-group">
+                    <label for="searchInput" style="width:100%">Buscar por nombre o número</label>
+                    <input type="text" id="searchInput" placeholder="Ej. Pikachu o 25">
+                </div>
+                
+                <div class="weight-controls">
+                    <div class="input-group">
+                        <label for="weightMin">Peso mínimo</label>
+                        <input type="number" id="weightMin" min="0" placeholder="Ej. 0">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="weightMax">Peso máximo</label>
+                        <input type="number" id="weightMax" min="0" placeholder="Ej. 1000">
+                    </div>
+                </div>
+                <!-- Botón integrado en la misma fila -->
+                <div class="button-group">
+                    <button id="searchButton">Buscar Pokémon</button>
+                </div>
+            </div>
+            
+
+        </div>
+    
+    <div class="sort-section">
+        <label for="orden">Ordenar por:</label>
+        <select id="orden">
+            <option value="idAsc">Número ↑</option>
+            <option value="idDesc">Número ↓</option>
+            <option value="nameAsc">Nombre A-Z</option>
+            <option value="nameDesc">Nombre Z-A</option>
+        </select>
+    </div>
+    </div>
+    <div id="resultados" class="pokemon-container"></div>
+    <button id="loadMore">Cargar más Pokemons</button>
+
+</body>
+    <script src="../js/config.js"></script>
+    <script src="../js/clases.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/aux.js"></script>
+    <script src="../js/pokemons.js"></script>
+</html>

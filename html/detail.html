@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Detalle Pokémon</title>
+</head>
+<body>
+
+    <!-- Menú superior -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="../img/pokedex-uoc.png">
+            </div>
+            <ul class="navbar-right">
+                <li><a href="indice.html">Pokemons</a></li>
+                <li><a href="listas.html">Listas
+                    <i class="fa-solid fa-heart"></i> <span style="font-size: 0.6em;" id="myTeamCount"></span>
+                    <i class="fa-solid fa-eye"></i> <span style="font-size: 0.6em;" id="wishesCount"></span>
+                <li><a href="video.html">Video</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" id="menuButton">Usuario</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="logoutButton">Logout</a>
+                    </div>
+                </li>
+            </ul>
+    </header>
+
+    <main>
+      <div style="  display: flex;  justify-content: center;">
+        <div id="pokemonDetail" class="pokedex-card">
+          <p>Cargando...</p>
+        </div>
+      </div>
+       <div>
+            <button id="backButton" class="back-button">← Volver al listado</button>
+        </div>
+    </main>
+
+
+    <script src="../js/config.js"></script>
+    <script src="../js/clases.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/aux.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
+</html>
